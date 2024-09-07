@@ -1,6 +1,7 @@
 
  Keep Talking and Nobody Explodes v. 1 The Button
-On the Subject of The Button
+
+# On the Subject of The Button
 You might think that a button telling you to press it is pretty straightforward.
 That’s the kind of thinking that gets people exploded.
 See Appendix A for indicator identification reference.
@@ -15,9 +16,10 @@ Button".
 6. If the button is red and the button says "Hold", press and immediately release the button.
 7. If none of the above apply, hold the button and refer to "Releasing a Held
 Button".
+
 Releasing a Held Button
 If you start holding the button down, a colored strip will light up on the right side of the module. Based on its color, you must release the button at a specific point in time:
-Blue strip: release when the countdown timer has a 4 in any position.
-White strip: release when the countdown timer has a 1 in any position.
-Yellow strip: release when the countdown timer has a 5 in any position.
-Any other color strip: release when the countdown timer has a 1 in any position.
+- Blue strip: release when the countdown timer has a 4 in any position.
+- White strip: release when the countdown timer has a 1 in any position.
+- Yellow strip: release when the countdown timer has a 5 in any position.
+- Any other color strip: release when the countdown timer has a 1 in any position.
