@@ -26,44 +26,81 @@ def is_empty_table(table_data):
         return True
     return False
 
-def is_sentence(text):
-    return re.match(r'^[A-Z0-9].*[.!?…:]\s*$', text.strip())
+def matches_pattern(text):
+    return re.match(r'^[A-Z0-9].*:$', text) is not None
+
+def process_lines(words):
+    result = ""
+    prev_size = None
+    min_size_threshold = 14  # min threshold size for title
+    max_size_threshold = 19  # max threshold size for title
+    line_buffer = []
+    last_word = len(words) - 2
+    for word_index, word in enumerate(words):
+        if word_index == 0 or word_index >= last_word:
+            continue
+        size_text = int(word["chars"][0]["size"])
+        current_text = word["text"].strip()
+
+        # Detect a title
+        if size_text >= min_size_threshold and size_text < max_size_threshold:
+            if line_buffer:
+                result += " ".join(line_buffer) + "\n"
+                line_buffer = []
+            result += f"\n\n# {current_text}\n"
+            prev_size = None
+            continue
+
+        # Check for the new line rule
+        if matches_pattern(current_text):
+            text = " ".join(line_buffer)
+            if line_buffer and matches_pattern(text):
+                result += text + "\n"
+            result += "\n" + current_text + "\n"
+            line_buffer = []
+            prev_size = size_text
+            continue
+
+        if current_text.startswith('"'):
+            if line_buffer:
+                result += " ".join(line_buffer) + "\n"
+            result += current_text + "\n"
+            line_buffer = []
+            prev_size = size_text
+            continue
+
+        # If the size is different, flush the buffer and start a new line
+        if prev_size is not None and size_text != prev_size:
+            if line_buffer:
+                result += " ".join(line_buffer) + "\n"
+            line_buffer = [current_text]
+        else:
+            if line_buffer:
+                line_buffer.append(current_text)
+            else:
+                line_buffer = [current_text]
+
+        # If the current text ends with a punctuation
+        if current_text.endswith((".", "?", "!", "…")):
+            result += " ".join(line_buffer) + "\n"
+            line_buffer = []
+
+        prev_size = size_text
+    return result
 
 for filename in os.listdir(folder_path):
     if filename.endswith('.pdf'):
         file_path = os.path.join(folder_path, filename)
         with pdfplumber.open(file_path) as pdf:
             for page_number, page in enumerate(pdf.pages):
-                # if page_number < 2:
-                #     continue
-                result = ""
+                if page_number < 4 or page_number > 10:
+                    continue
                 words = page.extract_text_lines()
-                text = ""
-                size = 0
-                last_word = len(words) - 2
-                for word_index, word in enumerate(words):
-                    if word_index == 0 or word_index >= last_word:
-                        continue
-                    w_size = int(word["chars"][0]["size"])
-                    current_text = word['text'].strip()
-                    if is_sentence(current_text):  
-                        if text:
-                            result += "\n" + text.replace("\n", " ")
-                        text = current_text
-                    else:
-                        if text and (is_sentence(text) or (size != 0 and size != w_size)):
-                            result += "\n" + text.replace("\n", " ")
-                            text = current_text
-                        else:
-                            text += " " + current_text
-                    size = w_size
-                
-                if text and is_sentence(text):
-                    result += "\n" + text
+                processed_text = process_lines(words)
 
                 txt_filename = f"{pages_dir}/page_{page_number + 1}.txt"
                 with open(txt_filename, 'w', encoding='utf-8') as txt_file:
-                    txt_file.write(result)
+                    txt_file.write(processed_text)
                 
                 for table_index, table in enumerate(page.find_tables()):
                     table_data = table.extract()
