@@ -1,13 +1,37 @@
-Keep Talking and Nobody Explodes v. 1 Who's on First
+### 1) Game Name
+"Who's on First" from "Keep Talking and Nobody Explodes"
 
+### 2) Game: Description
+The game involves interpreting words displayed on a bomb module to determine which buttons to press. It is designed as a challenging communication puzzle where players must read the display, find the corresponding word label using a reference table, and then use this label to determine the next action. The process repeats until the module is disarmed.
 
-# On the Subject of Who’s on First
-This contraption is like something out of a sketch comedy routine, which might be funny if it wasn't connected to a bomb. I’ll keep this brief, as words only complicate matters.
-1. Read the display and use step 1 to determine which button label to read.
-2. Using this button label, use step 2 determine which button to push.
-3. Repeat until the module has been disarmed.
+### 3) How to Play (Table)
 
+**Case 1: Displayed Word Determines Button Label to Read**
 
-# Step 1:
-
-Based on the display, read the label of a particular button and proceed to step 2:
+- **IF "YES" is displayed, THEN read the label on the button in the middle left.**
+- **IF "FIRST" is displayed, THEN read the label on the button in the top right.**
+- **IF "DISPLAY" is displayed, THEN read the label on the button in the bottom right.**
+- **IF "OKAY" is displayed, THEN read the label on the button in the top right.**
+- **IF "SAYS" is displayed, THEN read the label on the button in the bottom right.**
+- **IF "NOTHING" is displayed, THEN read the label on the button in the middle left.**
+- **IF "BLANK" is displayed, THEN read the label on the button in the middle right.**
+- **IF "NO" is displayed, THEN read the label on the button in the bottom right.**
+- **IF "LED" is displayed, THEN read the label on the button in the middle left.**
+- **IF "LEAD" is displayed, THEN read the label on the button in the bottom right.**
+- **IF "READ" is displayed, THEN read the label on the button in the middle right.**
+- **IF "RED" is displayed, THEN read the label on the button in the middle right.**
+- **IF "REED" is displayed, THEN read the label on the button in the bottom left.**
+- **IF "LEED" is displayed, THEN read the label on the button in the bottom left.**
+- **IF "HOLD ON" is displayed, THEN read the label on the button in the bottom right.**
+- **IF "YOU" is displayed, THEN read the label on the button in the middle right.**
+- **IF "YOU ARE" is displayed, THEN read the label on the button in the bottom right.**
+- **IF "YOUR" is displayed, THEN read the label on the button in the middle right.**
+- **IF "YOU'RE" is displayed, THEN read the label on the button in the bottom right.**
+- **IF "UR" is displayed, THEN read the label on the button in the top left.**
+- **IF "THERE" is displayed, THEN read the label on the button in the bottom right.**
+- **IF "THEIR" is displayed, THEN read the label on the button in the middle right.**
+- **IF "THEY'RE" is displayed, THEN read the label on the button in the bottom left.**
+- **IF "THEY ARE" is displayed, THEN read the label on the button in the middle left.**
+- **IF "SEE" is displayed, THEN read the label on the button in the bottom right.**
+- **IF "C" is displayed, THEN read the label on the button in the top right.**
+- **IF "CEE" is displayed, THEN read the label on the button in the bottom right.**

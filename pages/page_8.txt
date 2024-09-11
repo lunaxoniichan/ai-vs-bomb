@@ -1,13 +1,46 @@
-Keep Talking and Nobody Explodes v. 1 Simon Says
+### 1) Game Name:
+**Keep Talking and Nobody Explodes - Simon Says Module**
 
+### 2) Game: Description
+This game is similar to the classic "Simon Says" toy game, where players must match the sequence of colors that flash. In this module, you need to press the button corresponding to the flashing color using a provided table to determine the correct color to press based on the serial number and the number of strikes.
 
-# On the Subject of Simon Says
-This is like one of those toys you played with as a kid where you have to match the pattern that appears, except this one is a knockoff that was probably purchased at a dollar store.
-1. One of the four colored buttons will flash.
-2. Using the correct table below, press the button with the corresponding color.
-3. The original button will flash, followed by another. Repeat this sequence in order using the color mapping.
-4. The sequence will lengthen by one each time you correctly enter a sequence until the module is disarmed.
+### 3) How to Play
+#### Case 1: If the Serial Number Contains a Vowel
 
-If the serial number contains a vowel:
+- **IF there are No Strikes:**
+  - Red Flash: Press **Blue**
+  - Blue Flash: Press **Red**
+  - Green Flash: Press **Yellow**
+  - Yellow Flash: Press **Green**
 
-If the serial number does not contain a vowel:
+- **IF there is 1 Strike:**
+  - Red Flash: Press **Yellow**
+  - Blue Flash: Press **Green**
+  - Green Flash: Press **Blue**
+  - Yellow Flash: Press **Red**
+
+- **IF there are 2 Strikes:**
+  - Red Flash: Press **Green**
+  - Blue Flash: Press **Red**
+  - Green Flash: Press **Yellow**
+  - Yellow Flash: Press **Blue**
+
+#### Case 2: If the Serial Number Does Not Contain a Vowel
+
+- **IF there are No Strikes:**
+  - Red Flash: Press **Blue**
+  - Blue Flash: Press **Red**
+  - Green Flash: Press **Green**
+  - Yellow Flash: Press **Yellow**
+
+- **IF there is 1 Strike:**
+  - Red Flash: Press **Red**
+  - Blue Flash: Press **Blue**
+  - Green Flash: Press **Yellow**
+  - Yellow Flash: Press **Green**
+
+- **IF there are 2 Strikes:**
+  - Red Flash: Press **Yellow**
+  - Blue Flash: Press **Green**
+  - Green Flash: Press **Blue**
+  - Yellow Flash: Press **Red**
