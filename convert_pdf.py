@@ -2,6 +2,7 @@ import os
 import pdfplumber
 import csv
 import re
+from common.constant import *
 
 images_dir = "./images"
 os.makedirs(images_dir, exist_ok=True)
@@ -12,8 +13,7 @@ os.makedirs(csvs_dir, exist_ok=True)
 folder_path = './docs'
 os.makedirs(folder_path, exist_ok=True)
 
-pages_dir = "./pages"
-os.makedirs(pages_dir, exist_ok=True)
+os.makedirs(DIR_DATA_ETC, exist_ok=True)
 
 def is_empty_row(row):
     return all(cell is None or cell.strip() == "" for cell in row)
@@ -98,7 +98,7 @@ for filename in os.listdir(folder_path):
                 words = page.extract_text_lines()
                 processed_text = process_lines(words)
 
-                txt_filename = f"{pages_dir}/page_{page_number + 1}.txt"
+                txt_filename = f"{DIR_DATA_ETC}/page_{page_number + 1}.txt"
                 with open(txt_filename, 'w', encoding='utf-8') as txt_file:
                     txt_file.write(processed_text)
                 

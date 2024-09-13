@@ -1,0 +1,21 @@
+{
+  "embedding": {
+    "model": "sentence-transformers/all-mpnet-base-v2",
+    "model_kwargs": {"device": "cpu"}
+  },
+  "vectordb": {
+    "chunk_size": 500,
+    "chunk_overlap": 50
+  },
+  "RetrievalChain": {
+    "chain_type": "stuff",
+    "search_type": "similarity_score_threshold",
+    "search_kwargs": {"score_threshold": 0.5, "k": 6}
+  },
+  "llm": {
+    "model": "model/llama-2-7b-chat.ggmlv3.q2_K.bin",
+    "model_type": "llama",
+    "max_new_tokens": 512,
+    "temperature": 0.1
+  }
+}

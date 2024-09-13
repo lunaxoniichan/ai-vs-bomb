@@ -1,0 +1,16 @@
+pypdf
+langchain
+accelerate
+bitsandbytes
+transformers
+sentence_transformers
+chainlit
+huggingface_hub
+ctransformers
+beautifulsoup4
+requests
+psycopg2
+pgvector
+langchain_community
+openai
+pdfplumber

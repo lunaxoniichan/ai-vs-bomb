@@ -161,8 +161,38 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 csvs/
-docs/
 images/
 Scripts/
 pyvenv.cfg
 demo.py
+
+
+# Ignore logs folder
+logs
+
+# Ignore compiled executables
+*.exe
+
+# Ignore model files
+*.pt
+*.onnx
+*.pth
+*.index
+*.bin
+*.ckpt
+
+# Ignore Python bytecode files
+*.pyc
+
+# Ignore environment and virtual environment directories
+env/
+venv/
+
+# Ignore specific project directories
+/tracks/
+/lyrics/
+conversation.json
+demo.py
+rvc/models/embedders/contentvec/
+
+.chainlit
