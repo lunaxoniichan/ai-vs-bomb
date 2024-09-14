@@ -1,6 +1,8 @@
 # AI-VS-BOMB
 
->> img here
+Crating AI to solve the bomb in game "Keep talking and no body explode"
+
+![Diagram](./resources/thumbnail_relax-programming (1).png)
 
 Video: Show case
 https://youtu.be/TzH6jbSjZPc?si=JpxukBA21K1-10Xv
