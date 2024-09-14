@@ -10,7 +10,7 @@ os.makedirs(images_dir, exist_ok=True)
 csvs_dir = "./csvs"
 os.makedirs(csvs_dir, exist_ok=True)
 
-folder_path = './docs'
+folder_path = './resources'
 os.makedirs(folder_path, exist_ok=True)
 
 os.makedirs(DIR_DATA_ETC, exist_ok=True)
