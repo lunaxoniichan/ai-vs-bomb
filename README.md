@@ -36,10 +36,10 @@ This diagram illustrates the process of extracting and processing data from PDF 
    - The user’s prompt is pre-processed or refined before the data retrieval stage.
 
 9. **Retriever**:
-   - The retriever searches for relevant information from the VectorDB using the pre-processed prompt and forwards the results to the LLM (GPT-4).
+   - The retriever searches for relevant information from the VectorDB using the pre-processed prompt and forwards the results to the LLM (GPT-4o).
 
-10. **LLM (GPT-4)**:
-    - GPT-4 processes the retrieved data and generates a response based on the user’s prompt.
+10. **LLM (GPT-4o)**:
+    - GPT-4o processes the retrieved data and generates a response based on the user’s prompt.
 
 11. **TTS (Text-to-Speech)**:
     - The generated response is then converted into audio using a Text-to-Speech (TTS) system.
