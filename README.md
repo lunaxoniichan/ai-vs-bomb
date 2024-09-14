@@ -1,6 +1,6 @@
 # AI-RAG
 
-![Diagram](./resources/diagram.jpg)
+![Diagram](./resources/diagram.png)
 
 # PDF Processing System
 
